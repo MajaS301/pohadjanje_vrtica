@@ -2,7 +2,7 @@
 go
 drop database if exists pohadjanje_Vrtica;
 go
-create database pohadjanje_Vrtica;
+create database pohadjanje_Vrtica collate Croatian_CI_AS;
 go
 use pohadjanje_Vrtica;
 go
@@ -39,22 +39,29 @@ datum_rodjenja date,
 kontakt_roditelja varchar (20)
 );
 
-
+--1
 insert into skupine (naziv, prostorija) values
 ('Linići' , 'soba 906')
-
+--2
 insert into skupine (naziv, prostorija) values
 ('Točkice' , 'soba 129');
 
-
+--1
 insert into tete (ime, prezime) values
 ('Ana Marija' , 'Novak')
+--2
 insert into tete (ime, prezime) values
 ('Lara', 'Petrović')
+--3
 insert into tete (ime, prezime) values
 ('Ema', 'Vukić')
+--4
 insert into tete (ime, prezime) values
 ('Sofija', 'Pavlović')
 
 insert into podskupine (naziv, skupina, teta) values
-('Medeki', 'Linići', 'Ana Marija', 'Novak')
+('Medeki', 1, 1),
+('Zečići', 1, 3),
+('Anđelčići', 2,2),
+('Srčeka', 2,4)
+
