@@ -10,7 +10,7 @@ go
 create table skupine(
 šifra int not null primary key identity(1,1),
 naziv varchar(20) not null,
-prostorija varchar(20)
+prostorija varchar(20) not null
 );
 
 create table tete(
@@ -41,6 +41,8 @@ kontakt_roditelja varchar (20) not null
 
 
 insert into skupine (naziv, prostorija) values
-('Linići' , 'soba 906'),
+('Linići' , 'soba 906')
+
+insert into skupine (naziv, prostorija) values
 ('Točkice' , 'soba 129');
 
