@@ -38,3 +38,9 @@ spol bit not null,
 datum_rođenja date not null,
 kontakt_roditelja varchar (20) not null
 );
+
+
+insert into skupine (naziv, prostorija) values
+('Linići' , 'soba 906'),
+('Točkice' , 'soba 129');
+
