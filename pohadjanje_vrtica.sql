@@ -55,3 +55,6 @@ insert into tete (ime, prezime) values
 ('Ema', 'Vukić')
 insert into tete (ime, prezime) values
 ('Sofija', 'Pavlović')
+
+insert into podskupine (naziv, skupina, teta) values
+('Medeki', 'Linići', 'Ana Marija', 'Novak')
