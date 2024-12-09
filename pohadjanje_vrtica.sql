@@ -30,9 +30,9 @@ teta int not null references tete(sifra)
 
 
 create table djeca(
-sifra int not null identity(1,1),
+sifra int not null primary key identity(1,1),
 podskupina int not null references podskupine(sifra),
-ime varchar(20) not null primary key,
+ime varchar(20) not null,
 prezime varchar(20) not null,
 spol varchar (6) not null,
 datum_rodjenja date not null,
