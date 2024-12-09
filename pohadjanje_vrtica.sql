@@ -1,20 +1,20 @@
 ﻿use master
 go
-drop database if exists pohadjanje_Vrtica;
+drop database if exists pohađanje_Vrtića;
 go
-create database pohadjanje_Vrtica;
+create database pohađanje_Vrtića;
 go
-use pohadjanje_Vrtica;
+use pohađanje_Vrtića;
 go
 
 create table skupine(
-sifra int not null primary key identity(1,1),
+šifra int not null primary key identity(1,1),
 naziv varchar(20) not null,
 prostorija varchar(20)
 );
 
 create table tete(
-sifra int not null primary key identity(1,1),
+šifra int not null primary key identity(1,1),
 ime varchar(50) not null,
 prezime varchar(50) not null,
 broj_mobitela varchar(20),
@@ -22,19 +22,19 @@ oib char(11)
 );
 
 create table podskupine(
-sifra int not null primary key identity(1,1),
+šifra int not null primary key identity(1,1),
 naziv varchar(50) not null,
-skupina int not null references skupine(sifra),
-teta int not null references tete(sifra)
+skupina int not null references skupine(šifra),
+teta int not null references tete(šifra)
 );
 
 
 create table djeca(
-sifra int not null primary key identity(1,1),
-podskupina int not null references podskupine(sifra),
+šifra int not null primary key identity(1,1),
+podskupina int not null references podskupine(šifra),
 ime varchar(20) not null,
 prezime varchar(20) not null,
 spol bit not null,
-datum_rodjenja date not null,
+datum_rođenja date not null,
 kontakt_roditelja varchar (20) not null
 );
