@@ -24,6 +24,7 @@ create table tete(
 sifra int not null identity(1,1),
 ime varchar(50) not null,
 prezime varchar(50) not null,
+podskupina varchar(50) not null references podskupine(naziv),
 broj_mobitela varchar(20),
 oib char(11)
 );
