@@ -1,6 +1,6 @@
 ﻿use master
 go
-drop database if exists pohadjanje_vrtica;
+drop database if exists pohadjanje_Vrtica;
 go
 create database pohadjanje_Vrtica;
 go
@@ -34,7 +34,7 @@ sifra int not null primary key identity(1,1),
 podskupina int not null references podskupine(sifra),
 ime varchar(20) not null,
 prezime varchar(20) not null,
-spol varchar (6) not null,
+spol bit not null,
 datum_rodjenja date not null,
 kontakt_roditelja varchar (20) not null
 );
