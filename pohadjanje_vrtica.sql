@@ -44,7 +44,7 @@ insert into skupine (naziv, prostorija) values
 ('Linići' , 'soba 906')
 --2
 insert into skupine (naziv, prostorija) values
-('Točkice' , 'soba 129');
+('Lolići' , 'soba 129');
 
 --1
 insert into tete (ime, prezime) values
